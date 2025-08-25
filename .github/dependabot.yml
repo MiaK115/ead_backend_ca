@@ -1,0 +1,22 @@
+version: 2
+updates:
+  # Java/Maven – recipe-service
+  - package-ecosystem: "maven"
+    directory: "/recipe-service"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    labels: ["dependencies", "security"]
+  # Java/Maven – user-service
+  - package-ecosystem: "maven"
+    directory: "/user-service"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    labels: ["dependencies", "security"]
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels: ["dependencies", "ci"]
